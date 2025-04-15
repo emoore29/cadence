@@ -2,11 +2,13 @@
 
 A Spotify-integrated playlist generator based on track features.
 
+## Demo
+
+![Personal playlist generation for a whitelisted user](./demo1.gif)
+
+## Limitations
+
 Cadence is self-hosted and is therefore not available 24/7. Until an extension request is granted by Spotify, only whitelisted users can access the full features of the app. Non-whitelisted users can still filter public Spotify playlists but won't be able to save the playlist to their Spotify account or view their saved/top tracks.
-
-Here's a quick demo for a whitelisted user:
-
-![Personal playlist generation](./demo1.gif)
 
 ## Development TODOs
 
@@ -17,6 +19,7 @@ Here's a quick demo for a whitelisted user:
 - [ ] Improve Footer design
 - [ ] Apply for Spotify extension program
 - [ ] Create flowcharts to summarise API integration
+- [ ] Update "how it works" section of README for better documentation
 
 ## Development History
 
