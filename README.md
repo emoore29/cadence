@@ -8,6 +8,16 @@ Here's a quick demo for a whitelisted user:
 
 ![Personal playlist generation](./demo1.gif)
 
+## Development TODOs
+
+- [ ] Inform users about app limitations on website (e.g. whitelisting, explain where features are sourced from and why they may not be accurate)
+- [ ] Display track features in a modal
+- [ ] Add FAQ
+- [ ] Improve keyboard accessibility of track table
+- [ ] Improve Footer design
+- [ ] Apply for Spotify extension program
+- [ ] Create flowcharts to summarise API integration
+
 ## Development History
 
 Cadence was originally intended to be accessible for all Spotify users to create customised playlists from their personal Spotify libraries. Unfortunately, in November 2024 towards the end of Cadence's development, [Spotify deprecated the following endpoints without warning](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api), which were needed for Cadence to function as intended:
