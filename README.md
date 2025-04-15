@@ -6,7 +6,7 @@ Cadence is self-hosted and is therefore not available 24/7. Until an extension r
 
 Here's a quick demo for a whitelisted user:
 
-[Personal playlist generation](./demo1.gif)
+![Personal playlist generation](./demo1.gif)
 
 ## Development History
 
