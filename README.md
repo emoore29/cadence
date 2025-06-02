@@ -6,6 +6,16 @@ Cadence is self-hosted and is therefore not available 24/7. This was a deliberat
 
 **Note**: Until an extension request is granted by Spotify, only whitelisted users can access the full features of the app. Non-whitelisted users can still filter public Spotify playlists but won't be able to save the playlist to their Spotify account or view their saved/top tracks.
 
+## Contents
+
+- [demo](#demo)
+- [development todos](#development-todos)
+- [development history](#development-history)
+- [how it works](#how-it-works)
+- [authorization](#authorization-code-flow)
+- [how to run locally](#how-to-run-locally)
+
+
 ## Demo
 
 ![Personal playlist generation for a whitelisted user](./demo1.gif)
@@ -60,31 +70,6 @@ The code uses the [Authorization Code Flow](https://developer.spotify.com/docume
 
 Post-deprecation, this is still functional, so users can "log in" to Cadence. This means that when the playlist tracks are displayed, each track's saved status will match the track's saved status in that user's Spotify account and the user can save or unsave a track if they want to. If the user doesn't log in, a warning indicates that the saved statuses may not match their Spotify library and they won't be able to save or unsave any tracks. They also won't be able to save any playlists created with the demo data unless they are logged in.
 
-## Estimated time to load
-
-Calculated using an estimated number of actions. For example, a request to the Spotify API for 50 tracks is an action. Storing a track in IDB is an action.
-
-A user's saved tracks can be fetched 50 per request. Likewise, a user's top tracks can be fetched 50 per request. A user's top 50 artists can be fetched in one request.
-
-The total number of requests needed is therefore as follows:
-
-Let t = user's number of saved tracks
-
-(t/50) + (500/50) + 1 = (t + 550)/50
-
-Then, to fetch a track's features, a request is made to MusicBrainz to get the track's MBID, then to AcousticBrainz to get the track's features, then to IndexedDB to store the track. This sequence of requests is treated as one action, and must be done for every track.
-
-Therefore, the total number of actions to get all track features is simply the total number of tracks to be processed:
-
-t + 500
-
-So the total number of actions required is
-
-(51t + 1050)/50
-
-To get a percentage progress bar, every time an action is completed, the percentage worth of that action is added to the bar:
-
-progress + (1/estimatedActions) \* 100
 
 ## How to run locally
 
