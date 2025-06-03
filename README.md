@@ -2,7 +2,7 @@
 
 A Spotify-integrated playlist generator based on track features.
 
-Cadence is self-hosted and is therefore not available 24/7. This was a deliberate decision as the main goal of this project is learning. I do my best to keep it online as often as possible!
+Cadence is self-hosted and is therefore not available 24/7. This was a deliberate decision as the main goal of this project is learning, and self-hosting was a good opportunity to learn more about Docker and Nginx. I do my best to keep it online as often as possible!
 
 **Note**: Until an extension request is granted by Spotify, only whitelisted users can access the full features of the app. Non-whitelisted users can still filter public Spotify playlists but won't be able to save the playlist to their Spotify account or view their saved/top tracks. You can always [run the project locally](#how-to-run-locally) if you want to try the full features.
 
