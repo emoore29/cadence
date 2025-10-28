@@ -2,14 +2,11 @@
 
 A Spotify-integrated playlist generator based on track features.
 
-Cadence is self-hosted and is therefore not available 24/7. This was a deliberate decision as the main goal of this project is learning, and self-hosting was a good opportunity to learn more about Docker and Nginx. I do my best to keep it online as often as possible!
-
-**Note**: Until an extension request is granted by Spotify, only whitelisted users can access the full features of the app. Non-whitelisted users can still filter public Spotify playlists but won't be able to save the playlist to their Spotify account or view their saved/top tracks. You can always [run the project locally](#how-to-run-locally) if you want to try the full features.
+Cadence was originally self-hosted; however, it is no longer hosted due to resource constraints. The project relies on running a full MusicBrainz database, which requires substantial RAM, CPU and disk space (the MusicBrainz API was too time-restricted for the purposes of this project). My original goal with this project was to complete a fully-functional web app that could be used by anyone with a Spotify account, but due to some [roadblocks](#development-history) along the way, I wasn't able to complete the original vision for the project and have decided to move on to new projects now that I've learned what I could from this one. You can see a demo of the final functionality in the gif below.
 
 ## Contents
 
 - [demo](#demo)
-- [development todos](#development-todos)
 - [development history](#development-history)
 - [how it works](#how-it-works)
 - [authorization](#authorization-code-flow)
@@ -19,17 +16,6 @@ Cadence is self-hosted and is therefore not available 24/7. This was a deliberat
 ## Demo
 
 ![Personal playlist generation for a whitelisted user](./demo1.gif)
-
-## Development TODOs
-
-- [ ] Inform users about app limitations on website (e.g. whitelisting, explain where features are sourced from and why they may not be accurate)
-- [ ] Display track features in a modal
-- [ ] Add FAQ
-- [ ] Improve keyboard accessibility of track table
-- [ ] Improve Footer design
-- [ ] Apply for Spotify extension program
-- [ ] Create flowcharts to summarise API integration
-- [ ] Update "how it works" section of README for better documentation
 
 ## Development History
 
@@ -58,7 +44,7 @@ Once a user has granted Cadence permission to access their Spotify data, they ca
 - "topTracks" - a user's top 500 tracks and features from the last 12 months
 - "topArtists" - a user's top 50 artists from the last 12 months
 
-The user could then choose to filter these stores based on the track features available (currently BPM, chords key and chords scale - pre-Spotify-deprecation, more features were available).
+The user could then choose to filter these stores based on the track features available (currently BPM, chords key and chords scale; pre-Spotify-deprecation, more features were available).
 
 Prior to Spotify deprecation, users also had the option to get recommendations from Spotify based on custom "seeds", such as their favourite genre(s), track(s), and/or artist(s), alongside any desired track features. Now, the input fields to search for these seeds are still functional, but as there is no way to demonstrate this feature with sample data, clicking submit will display an error notification and won't return any tracks.
 
